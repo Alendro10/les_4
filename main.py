@@ -35,7 +35,12 @@ class Student:
     def live(self, day):
         day = "Day" + str(day) + "of" +self.name + "life"
         print(f"{day:=^50}")
-        live_cube = random.randint(1, 3)
+        if self.gladness >= 50:
+            live_cube = 1
+        elif self.progress<=0:
+            live_cube =1
+        else :
+            live_cube = random.randint(1, 3)
         if live_cube == 1:
             self.to_study()
         elif live_cube == 2:
